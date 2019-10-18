@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const expressSanitizer = require('express-sanitizer');
 
 const projectRoutes = require('./controllers/project');
 const testRunRoutes = require('./controllers/testruns');
@@ -9,6 +10,7 @@ const testSuitesRoutes = require('./controllers/testsuites');
 const testCaseRoutes = require('./controllers/testcase');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSanitizer());
 
 mongoose.connect('mongodb://localhost:27017/sigmatest_db', { useNewUrlParser: true, useUnifiedTopology: true });
 

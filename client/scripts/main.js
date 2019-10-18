@@ -8,9 +8,25 @@ document.onreadystatechange = function(){
         }).done(getProjects);
     
         function getProjects(projects){
-            console.log(projects.title);
+            for (project of projects){
+                $('#projectTableBody').append(`
+                    <tr>
+                        <td><a href="">${project.title}</a></td>
+                    </tr>
+                `);
+            }
         }
+
+        $('#projectForm').submit(function(e){
+            e.preventDefault();
+            let formData = $(this).serialize();
+            $.ajax({
+                url : 'http://localhost:3000/project',
+                data : formData,
+                type : 'POST'
+
+            });
+        });
     }
-    
-    
+
 }
