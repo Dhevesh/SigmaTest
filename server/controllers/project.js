@@ -8,7 +8,7 @@ router.get('/', (req, res)=>{
         if (!err){
             res.json(foundProjects);
         } else {
-            return res.status(404);
+            res.status(404);
         }
     });
 });
@@ -18,7 +18,7 @@ router.post('/', async function (req, res){
     req.body.project.description = req.sanitize(req.body.project.description);
     let projectData = req.body.project;
     await Projects.create(projectData, (err, createdProject)=>{
-        return createdProject;
+        return res.json(createdProject);
     });
 }); 
 
