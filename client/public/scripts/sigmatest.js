@@ -31,7 +31,7 @@ document.onreadystatechange = function(){
             for (project of projects){
                 $('#projectTableBody').append(`
                     <tr>
-                        <td><a href="projects/${project.title}/show"></a></td>
+                        <td><a href="/projects/${project.title}/show">${project.title}</a></td>
                     </tr>
                 `);
             }
@@ -42,15 +42,15 @@ document.onreadystatechange = function(){
             showProjects();
         }
 
-        $('.table').on('click','a[href!=""]', function(e){
+        $('.table').on('click','a[href!=""]', async function(e){
             e.preventDefault();
             window.location = $(this).attr('href');
             
+            
         });
 
-        function displaySomething(){
-            $('#showId').html("my new text");
-        }
+        
+
     }
 
 }

@@ -1,4 +1,5 @@
 <% include partials/header%>
+<title>SigmaTest</title>
     <div class="container">
         <h1>SigmaTest</h1>
         <div id="loading" class="spinner-border text-primary" role="status">
@@ -7,7 +8,7 @@
         <div class="form mb-4">
             <form id="projectForm" action="http://localhost:3000/project">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="project[title]" placeholder="Project Title" required>
+                    <input class="form-control" type="text" name="project[title]" placeholder="Project Title" required autofocus>
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" name="project[description]" id="" cols="30" rows="2" placeholder="Project Description [Optional]"></textarea>

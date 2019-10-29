@@ -13,6 +13,7 @@ app.get("/projects/:id/show", (req, res)=>{
     res.render("show");
 });
 
-app.listen(8000, ()=>{
-    console.log('client listening on port 8080');
+let PORT = process.env.PORT || 8080
+app.listen(PORT, ()=>{
+    console.log('client listening on port ', PORT);
 });
