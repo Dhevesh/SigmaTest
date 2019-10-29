@@ -31,7 +31,7 @@ document.onreadystatechange = function(){
             for (project of projects){
                 $('#projectTableBody').append(`
                     <tr>
-                        <td><a href="projects/${project.title}/show"></a></td>
+                        <td><a href="/${project.title}/show">${project.title}</a></td>
                     </tr>
                 `);
             }
@@ -44,7 +44,7 @@ document.onreadystatechange = function(){
 
         $('.table').on('click','a[href!=""]', function(e){
             e.preventDefault();
-            window.location = $(this).attr('href');
+            window.location = "/views/show";
             
         });
 
