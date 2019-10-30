@@ -42,15 +42,12 @@ document.onreadystatechange = function(){
             showProjects();
         }
 
-        $('.table').on('click','a[href!=""]', async function(e){
-            e.preventDefault();
-            window.location = $(this).attr('href');
+        // $('.table').on('click','a[href!=""]', function(e){
+        //     e.preventDefault();
+        //     window.location = $(this).attr('href');
             
             
-        });
-
-        
-
+        // });
     }
 
 }

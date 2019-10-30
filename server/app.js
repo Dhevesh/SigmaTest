@@ -28,11 +28,6 @@ app.use('/project/:id/testruns', testRunRoutes);
 app.use('/project/:id/testsuites', testSuitesRoutes);
 app.use('/project/:id/testsuite/:testsuite_id/testcases', testCaseRoutes);
 
-app.get('/', (req, res) => {
-    res.json(simpleJSONResponse);
-});
-
-
 
 
 let PORT = process.env.PORT || 3000;
