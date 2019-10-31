@@ -9,8 +9,13 @@ app.get("/", (req, res)=>{
     res.render("index");
 });
 
-app.get("/projects/:id/show", (req, res)=>{
-    res.render("show");
+app.get("/projects/:id", (req, res)=>{
+    if (req.xhr){
+        res.json(req.params.id);
+    } else {
+        res.render("show");
+    }
+    
 });
 
 let PORT = process.env.PORT || 8080

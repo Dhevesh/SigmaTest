@@ -20,6 +20,16 @@ router.post('/', async function (req, res){
     await Projects.create(projectData, (err, createdProject)=>{
         return res.json(createdProject);
     });
-}); 
+});
+
+router.get('/:id', async (req, res) =>{
+    await Projects.findOne({_id : req.params.id}, (err, foundProject)=>{
+        if (!err){
+            return res.json(foundProject);
+        } else {
+            return res.status(404);
+        }
+    });
+});
 
 module.exports = router;
