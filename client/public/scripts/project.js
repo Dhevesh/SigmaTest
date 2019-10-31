@@ -49,12 +49,13 @@ document.onreadystatechange = function(){
             }
 
         }
-
-        function makeActive(){
-            $('.active').removeClass("active");
-            $('#overview').addClass("active");
+        function setNavLinks(){
+            $('#overviewLink').attr('href', `/project/${projectId}`);
+            $('#testrunsLink').attr('href', `/project/${projectId}/testruns`);
+            $('#testsuitesLink').attr('href', `/project/${projectId}/testsuites`);
         }
 
-        makeActive();
+        setNavLinks();
+        
     }
 }

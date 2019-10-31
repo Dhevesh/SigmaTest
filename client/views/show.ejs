@@ -1,6 +1,16 @@
 <% include partials/header%>
 <div class="container" id="showContainer">
-    <%include partials/nav%>
+    <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a id="overviewLink" class="nav-link active" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a id="testrunsLink" class="nav-link" href="#">Test Runs</a>
+            </li>
+            <li class="nav-item">
+                <a id="testsuitesLink" class="nav-link" href="#">Test Suites</a>
+            </li>
+        </ul>
     <div class="loading" id="loading">
         <div class="spinner-border text-primary" role="status">
             <span class="sr-only">Loading...</span>

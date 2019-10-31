@@ -70,7 +70,7 @@ document.onreadystatechange = function(){
                 for (project of projects){
                     $('#projectTableBody').append(`
                         <tr>
-                            <td><a href="/projects/${project._id}">${project.title}</a></td>
+                            <td><a href="/project/${project._id}">${project.title}</a></td>
                         </tr>
                     `);
                 }
@@ -111,7 +111,7 @@ document.onreadystatechange = function(){
             $('input[type="text"]').val("");
             $('#projectTableBody').append(`
                 <tr>
-                    <td><a href="/projects/${project._id}">${project.title}</a></td>
+                    <td><a href="/project/${project._id}">${project.title}</a></td>
                 </tr>
             `);
         }
